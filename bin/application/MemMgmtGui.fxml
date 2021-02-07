@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5769230769230769" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0">
+         <children>
+            <ListView fx:id="memoryAllocList" layoutX="71.0" layoutY="14.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </ListView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="323.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Label layoutX="37.0" layoutY="49.0" text="New Process + Size">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <TextField fx:id="addProcessTxtField" layoutX="14.0" layoutY="72.0" />
+            <Button layoutX="184.0" layoutY="72.0" mnemonicParsing="false" onMouseClicked="#onClickedAddBtn" text="ADD">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label layoutX="98.0" layoutY="139.0" text="Process Info">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Label>
+            <TextField fx:id="processInfoTxtField" layoutX="15.0" layoutY="166.0" prefHeight="25.0" prefWidth="221.0" />
+            <Button layoutX="149.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#onClickedTerminateBtn" text="Terminate">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label layoutX="62.0" layoutY="14.0" text="Memory Size: 128">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
+            <Button layoutX="21.0" layoutY="199.0" mnemonicParsing="false" onMouseReleased="#setMemoryAllocSelect" prefHeight="25.0" prefWidth="94.0" text="Process Info">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
